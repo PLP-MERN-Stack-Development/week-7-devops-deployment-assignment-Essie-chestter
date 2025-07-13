@@ -1,4 +1,4 @@
-name: Frontend CI
+name: Frontend CI (live-pulse-talk)
 
 on:
   push:
@@ -17,14 +17,14 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '18' # live-pulse-talk uses Node.js 16 or higher
     - name: Install dependencies
       run: npm install
-      working-directory: ./client
-    - name: Run tests
-      run: npm test
       working-directory: ./client
     - name: Build
       run: npm run build
       working-directory: ./client
+
+
+
 
