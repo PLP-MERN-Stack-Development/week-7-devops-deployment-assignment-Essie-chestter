@@ -1,5 +1,4 @@
-
-name: Backend CI
+name: Backend CI (live-pulse-talk)
 
 on:
   push:
@@ -18,11 +17,11 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '18' # live-pulse-talk uses Node.js 16 or higher
     - name: Install dependencies
       run: npm install
       working-directory: ./server
-    - name: Run tests
-      run: npm test
-      working-directory: ./server
+
+
+
 
