@@ -1,5 +1,5 @@
 
-name: Backend CD
+name: Backend CD (live-pulse-talk)
 
 on:
   push:
@@ -14,11 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Deploy to Render
-      run: |
-        # Example deployment script for Render. Adjust as needed.
-        # This assumes you have Render CLI configured or are using Render's Git integration.
-        echo "Deploying backend to Render..."
-        # Add your Render deployment commands here
-        # e.g., render deploy --serviceId ${{ secrets.RENDER_SERVICE_ID }}
+      run: live-pulse-talk
+        
 
 
